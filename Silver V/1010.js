@@ -41,3 +41,24 @@ const main = () => {
         console.log(parseInt(answer + 0.5));
     });
 };
+
+
+///////////////////////
+
+const fs = require("fs")
+const input = fs.readFileSync("/dev/stdin").toString().split("\n")
+const count = Number(input[0])
+
+for(let i = 1; i<=count;i++){
+    let a = 1
+    let b = 1
+    let num2 = Number(input[i].split(" ")[0])
+    let num1 = Number(input[i].split(" ")[1])
+    for(let j = 0; j<num2;j++){
+    a = (num1-j) * a
+}
+    for(let k = 1; k<=num2;k++){
+    b = b * k
+}
+    console.log(Math.floor(a/b))
+}
