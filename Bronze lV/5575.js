@@ -16,7 +16,7 @@ const timeConvert = (time) => {
       if(i === 3) endTime += time[i] * 60 *60
       if(i === 4) endTime += time[i] * 60
       if(i === 5) endTime += time[i]
-    } 
+    }
   }
   let totalTime = endTime - startTime;
   let totalHour = parseInt((totalTime / 3600) % 24)
